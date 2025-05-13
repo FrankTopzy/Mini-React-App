@@ -1,0 +1,67 @@
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.number, .operator {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  width: 70px;
+  height: 70px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  transition: border-color 0.25s;
+  outline: none;
+}
+
+.container {
+  color-scheme: light dark;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.calculator {
+  background: grey;
+  min-height: 300px;
+  padding-block: 10px;
+  padding-inline: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.calculator div {
+  display: flex;
+  gap: 20px;
+}
+
+.calculator div button {
+  font-size: 20px;
+}
+
+.calculator div .input {
+  padding: 20px 10px;
+  width: 340px;
+  outline: 0;
+  border: none;
+  font-size: 20px;
+  text-align: right;
+}
+
+.operator {
+  color: turquoise;
+}
+
+.equals {
+  width: 160px;
+}

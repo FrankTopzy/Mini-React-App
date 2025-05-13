@@ -1,0 +1,59 @@
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+.todo {
+  background: var(background-color);
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-app {
+  width: 500px;
+  background: #535bf2;
+  padding: 10px;
+}
+
+.todo-app h2 {
+  text-align: center;
+}
+
+.todo-app .input {
+  width: 100%;
+  margin-block: 20px;
+
+  display: flex;
+}
+
+.input input {
+  flex: 1;
+
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+}
+
+.input button {
+  padding-inline: 15px;
+}
+
+.tasks p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tasks p span {
+  flex: 1;
+}
+
+.tasks p img {
+  cursor: pointer;
+}
