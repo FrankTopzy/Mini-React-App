@@ -15,7 +15,7 @@
 }
 
 .todo-app {
-  width: 500px;
+  min-width: 500px;
   background: #535bf2;
   padding: 10px;
 }
@@ -48,10 +48,15 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  max-width: 600px;
 }
 
 .tasks p span {
   flex: 1;
+  word-wrap: break-word;
+  max-width: 500px;
+  margin-right: 10px;
+  text-transform: capitalize;
 }
 
 .tasks p img {
