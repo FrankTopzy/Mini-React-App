@@ -5,6 +5,10 @@ function Calculator() {
   const [input, setInput] = useState(localStorage.getItem("input") || "")
 
   function buttons(value) {
+    if (input === undefined) {
+      setInput("");
+    }
+    
     setInput(prev => prev + value)
   }
 
@@ -16,17 +20,15 @@ function Calculator() {
     saveData();
   }, [input])
 
-  window.addEventListener("keydown", (e) => {
-    if (e.key.toLocaleLowerCase() === "enter") {
-      setInput(new Function('return ' + input)())
-    }
-  })
+  const handleCalculation = () => {
+    setInput(new Function('return ' + input)())
+  }
 
   return (
     <div className='container'>
       <div className="calculator">
         <div>
-          <input type="text" className='input' value={input} readOnly/>
+          <input type="text" className='input' value={input ?? ""} readOnly/>
         </div>
 
         <div>
@@ -60,7 +62,7 @@ function Calculator() {
         <div>
           <button className="number" value={"0"} onClick={(e) => buttons(e.target.value)}>0</button> 
           <button className="number" value={"00"} onClick={(e) => buttons(e.target.value)}>00</button> 
-          <button className="operator equals" value={"="} onClick={() => setInput(new Function('return ' + input)())}>=</button>
+          <button className="operator equals" value={"="} onClick={handleCalculation}>=</button>
         </div>
       </div>
     </div>
