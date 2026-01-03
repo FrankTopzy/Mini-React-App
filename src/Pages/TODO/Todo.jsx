@@ -24,6 +24,12 @@ function Todo() {
     )
   }
 
+  window.addEventListener('keydown', (e) => {
+    if (e.key === "Enter") {
+      handleAddTask;
+    }
+  })
+
   /*useEffect(() => {
     window.addEventListener("keydown", (e) => {
     if (e.key === "Enter" && !hasRun.current) {
@@ -65,10 +71,12 @@ function Todo() {
   return (
     <div className='todo'>
       <div className="todo-app">
-        <h2>{completedTasks}/{todo.length} Task {todo.length >= 1 ? "Completed" : "Added"}</h2>
-        <div className="input">
-          <input type="text" value={task} placeholder='Add new task........' onChange={handleInput}/>
-          <button onClick={handleAddTask}>Add</button>
+        <div className='input-field'>
+          <h2>{completedTasks}/{todo.length} Task {todo.length >= 1 ? "Completed" : "Added"}</h2>
+          <div className="input">
+            <input type="text" value={task} placeholder='Add new task........' onChange={handleInput}/>
+            <button onClick={handleAddTask}>Add</button>
+          </div>
         </div>
 
         <div className="tasks">
